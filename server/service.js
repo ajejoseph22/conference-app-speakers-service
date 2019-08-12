@@ -24,7 +24,7 @@ module.exports = config => {
   });
 
   //MINIMIZED LIST OF SPEAKERS
-  service.get("/list", async (req, res, next) => {
+  service.get("/list-short", async (req, res, next) => {
     try {
       res.json(await speakers.getListShort());
     } catch (err) {
