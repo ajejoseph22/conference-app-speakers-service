@@ -14,6 +14,8 @@ module.exports = config => {
     });
   }
 
+  service.use("/images", express.static(config.data.images));
+
   //LIST OF SPEAKERS
   service.get("/list", async (req, res, next) => {
     try {
